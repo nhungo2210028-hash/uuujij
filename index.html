@@ -4,18 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nhóm 2 Lớp 12 Văn</title>
+
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #e8f3ff; /* pastel xanh dương */
             margin: 0;
             padding: 20px;
             color: #2a4d69;
+
+            /* Ảnh nền */
+            background-image: url("anhnen.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
+
+        /* LỚP MỜ ĐỂ ĐỌC CHỮ RÕ */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(2px);
+            z-index: -1;
+        }
+
         h1, h2 {
             text-align: center;
             color: #2a4d69;
         }
+
         /* --- KHUNG THÀNH VIÊN --- */
         .container {
             display: grid;
@@ -24,6 +42,7 @@
             max-width: 1000px;
             margin: 0 auto;
         }
+
         .member {
             background: #ffffff;
             padding: 20px;
@@ -31,6 +50,7 @@
             text-align: center;
             box-shadow: 0 3px 8px rgba(0,0,0,0.1);
         }
+
         .avatar {
             width: 120px;
             height: 120px;
@@ -39,11 +59,13 @@
             border: 3px solid #bcdcff;
             margin-bottom: 10px;
         }
+
         .name {
             font-size: 20px;
             font-weight: bold;
             margin-bottom: 5px;
         }
+
         /* --- KHUNG BÀI HỌC --- */
         .lessons {
             margin-top: 40px;
@@ -55,6 +77,7 @@
             margin-left: auto;
             margin-right: auto;
         }
+
         .lesson-list {
             list-style: none;
             padding: 0;
@@ -62,6 +85,7 @@
             display: grid;
             gap: 15px;
         }
+
         .lesson-list a {
             display: block;
             padding: 18px;
@@ -74,6 +98,7 @@
             transition: 0.2s;
             box-shadow: 0 2px 6px rgba(0,0,0,0.1);
         }
+
         .lesson-list a:hover {
             background: #dcecff;
             color: #0c4a85;
@@ -81,45 +106,58 @@
         }
     </style>
 </head>
+
 <body>
     <h1>Nhóm 2 Lớp 12 Văn</h1>
+
     <div class="container">
+
         <!-- THÀNH VIÊN 1 -->
         <div class="member">
             <img src="anh1.jpg" alt="Ảnh thành viên" class="avatar">
             <div class="name">Ngô Ngọc Như Anh</div>
         </div>
+
         <!-- THÀNH VIÊN 2 -->
         <div class="member">
             <img src="anh2.jpg" alt="Ảnh thành viên" class="avatar">
             <div class="name">Võ Thị Phương Thanh</div>
         </div>
+
         <!-- THÀNH VIÊN 3 -->
         <div class="member">
             <img src="anh3.jpg" alt="Ảnh thành viên" class="avatar">
             <div class="name">Nguyễn Hoàng Anh Thơ</div>
         </div>
+
     </div>
+
     <!-- DANH SÁCH BÀI HỌC -->
     <section class="lessons">
         <h2>Danh sách Bài Học</h2>
         <ul class="lesson-list">
+
             <li><a href="https://www.canva.com/design/DAG1lfqGfAM/4jyVqoT0oir-Dm5fHRCH0Q/edit?zarsrc=411" target="_blank">
-                Bài 1 & 2: Làm quen với trí tuệ nhân tạo
+                Bài 1 & 2: Trí tuệ nhân tạo
             </a></li>
+
             <li><a href="https://www.canva.com/design/DAGzmqSLqns/zTytNEdptBjnmKe9WBBNfA/edit?zarsrc=411" target="_blank">
                 Bài 4: Giao thức mạng
             </a></li>
+
             <li><a href="https://www.canva.com/design/DAG2eeW3ki8/k2l6FfFBv46b8fmsAST_ZA/edit?zarsrc=411" target="_blank">
                 Bài 6: Giao tiếp & ứng xử trong không gian mạng
             </a></li>
+
             <li><a href="#">Bài 3: Một số thiết bị mạng thông dụng</a></li>
             <li><a href="#">Bài 5: Chia sẻ tài nguyên trên mạng</a></li>
             <li><a href="#">Bài 7: HTML và cấu trúc trang web</a></li>
             <li><a href="#">Bài 8: Định dạng văn bản</a></li>
             <li><a href="#">Bài 9: Tạo danh sách, bảng</a></li>
             <li><a href="#">Bài 10: Tạo liên kết</a></li>
+
         </ul>
     </section>
+
 </body>
 </html>
