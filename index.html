@@ -15,6 +15,7 @@
             text-align: center;
             margin-bottom: 30px;
         }
+        /* Khung thành viên */
         .container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -24,126 +25,82 @@
         }
         .member {
             background: #fff;
-            padding: 15px;
+            padding: 20px;
             border-radius: 12px;
             text-align: center;
             box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-        }
-        .member img {
-            width: 100%;
-            max-width: 180px;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 50%;
-            margin-bottom: 10px;
         }
         .name {
             font-size: 20px;
             font-weight: bold;
             margin-bottom: 5px;
         }
-        .role {
-            color: #555;
+        /* Khung bài học */
+        .lessons {
+            margin-top: 40px;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
         }
-		.lessons {
-    margin-top: 40px;
-    padding: 20px;
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-}
-
-.lesson-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.lesson-list li {
-    margin: 10px 0;
-}
-
-.lesson-list a {
-    text-decoration: none;
-    color: #007bff;
-    font-weight: 600;
-    font-size: 17px;
-    transition: 0.2s;
-}
-
-.lesson-list a:hover {
-    color: #0056b3;
-}
-.lessons {
-    margin-top: 40px;
-    padding: 20px;
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-}
-
-.lesson-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    gap: 15px; /* khoảng cách giữa các khung */
-}
-
-.lesson-list li {
-    /* không cần margin riêng nữa, dùng gap trong grid */
-}
-
-.lesson-list a {
-    display: block; /* biến link thành khối */
-    padding: 20px; /* tạo khung to */
-    background: #f8f9fa; /* màu nền khung */
-    border-radius: 12px;
-    text-decoration: none;
-    color: #007bff;
-    font-weight: 600;
-    font-size: 18px;
-    transition: 0.2s;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.lesson-list a:hover {
-    background: #e2e6ea; /* màu khi hover */
-    color: #0056b3;
-    transform: translateY(-2px); /* nổi lên 1 chút */
-}
+        .lesson-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            gap: 15px;
+        }
+        .lesson-list a {
+            display: block;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: 600;
+            font-size: 18px;
+            transition: 0.2s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .lesson-list a:hover {
+            background: #e2e6ea;
+            color: #0056b3;
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 <body>
     <h1>Các thành viên của nhóm</h1>
-    
     <div class="container">
         <div class="member">
-    <img src="images/anh1.jpg" alt="Ngô Ngọc Như Anh" />
-    <div class="name">Ngô Ngọc Như Anh</div>
-</div>
-<div class="member">
-    <img src="images/anh2.jpg" alt="Võ Thị Phương Thanh" />
-    <div class="name">Võ Thị Phương Thanh</div>
-</div>
-</div><div class="member">
-    <img src="images/anh3.jpg" alt="Nguyễn Hoàng Anh Thơ" />
-    <div class="name">Nguyễn Hoàng Anh Thơ</div>
-</div>
-<!-- Danh sách bài học -->
-<section class="lessons">
-    <h2>Danh sách Bài Học</h2>
-    <ul class="lesson-list">
-        <li><a href="#">Bài 1: Làm quen với trí tuệ nhân tạo</a></li>
-        <li><a href="#">Bài 2: Trí tuệ nhân tạo trong khoa học và đời sống</a></li>
-        <li><a href="#">Bài 3: Một số thiết bị mạng thông dụng</a></li>
-        <li><a href="#">Bài 4: Giao thức mạng</a></li>
-        <li><a href="#">Bài 5: Thực hành chia sẻ tài nguyên trên mạng</a></li>
-        <li><a href="#">Bài 6: Giao tiếp và ứng xử trong không gian mạng</a></li>
-        <li><a href="#">Bài 7: HTML và cấu trúc trang web</a></li>
-        <li><a href="#">Bài 8: Định dạng văn bản</a></li>
-        <li><a href="#">Bài 9: Tạo danh sách, bảng</a></li>
-        <li><a href="#">Bài 10: Tạo liên kết</a></li>
-    </ul>
-</section>
+            <div class="name">Ngô Ngọc Như Anh</div>
+        </div>
+        <div class="member">
+            <div class="name">Võ Thị Phương Thanh</div>
+        </div>
+        <div class="member">
+            <div class="name">Nguyễn Hoàng Anh Thơ</div>
+        </div>
+    </div>
+    <!-- Danh sách bài học -->
+    <section class="lessons">
+        <h2>Danh sách Bài Học</h2>
+        <ul class="lesson-list">
+            <li><a href="#">Bài 1: Làm quen với trí tuệ nhân tạo</a></li>
+            <li><a href="#">Bài 2: Trí tuệ nhân tạo trong khoa học và đời sống</a></li>
+            <li><a href="#">Bài 3: Một số thiết bị mạng thông dụng</a></li>
+            <li><a href="#">Bài 4: Giao thức mạng</a></li>
+            <li><a href="#">Bài 5: Thực hành chia sẻ tài nguyên trên mạng</a></li>
+            <li><a href="#">Bài 6: Giao tiếp và ứng xử trong không gian mạng</a></li>
+            <li><a href="#">Bài 7: HTML và cấu trúc trang web</a></li>
+            <li><a href="#">Bài 8: Định dạng văn bản</a></li>
+            <li><a href="#">Bài 9: Tạo danh sách, bảng</a></li>
+            <li><a href="#">Bài 10: Tạo liên kết</a></li>
+       </ul>
+    </section>
+</body>
 </html>
+
