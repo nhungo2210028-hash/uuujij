@@ -5,72 +5,130 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Nhóm 2 Lớp 12 Văn</title>
 
-
 <style>
 body {
-font-family: Arial, sans-serif;
-margin: 0;
-padding: 0;
-color: #2a4d69;
-background-image: url("anhnen.jpg");
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #2a4d69;
+    background-image: url("anhnen.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
-
 
 /* LỚP MỜ */
 body::before {
-content: "";
-position: fixed;
-inset: 0;
-background: rgba(255, 255, 255, 0.5); /* giảm còn 50% */
-backdrop-filter: blur(2px);
-z-index: -1;
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.5); /* 50% mờ */
+    backdrop-filter: blur(2px);
+    z-index: -1;
 }
 
-
-/* ===== THANH MENU ===== */
+/* THANH MENU */
 nav {
-background: #ffffffcc;
-backdrop-filter: blur(4px);
-padding: 12px 20px;
-box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-position: sticky;
-top: 0;
-z-index: 10;
+    background: #ffffffcc;
+    backdrop-filter: blur(4px);
+    padding: 12px 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
-
 
 nav ul {
-list-style: none;
-margin: 0;
-padding: 0;
-display: flex;
-gap: 25px;
-align-items: center;
-font-size: 18px;
-flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    font-size: 18px;
+    flex-wrap: wrap;
 }
-
 
 nav ul li a {
-text-decoration: none;
-color: #1d5fa7;
-font-weight: 600;
-transition: 0.2s;
+    text-decoration: none;
+    color: #1d5fa7;
+    font-weight: 600;
+    transition: 0.2s;
 }
-
 
 nav ul li a:hover {
-color: #0c4a85;
+    color: #0c4a85;
 }
 
-
+/* TÍTLE */
 h1, h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* ẢNH THÀNH VIÊN */
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 30px auto;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.member {
+    text-align: center;
+}
+
+.avatar {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #ffffffaa;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+.name {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #0c4a85;
+}
+
+/* DANH SÁCH BÀI HỌC */
+.lessons {
+    padding: 10px 20px 40px;
+}
+
+.lesson-list {
+    max-width: 700px;
+    margin: auto;
+    list-style: none;
+    padding: 0;
+}
+
+.lesson-list li {
+    margin: 10px 0;
+    font-size: 19px;
+}
+
+.lesson-list li a {
+    text-decoration: none;
+    color: #1d5fa7;
+    font-weight: 600;
+}
+
+.lesson-list li a:hover {
+    text-decoration: underline;
+    color: #0c4a85;
+}
+</style>
+</head>
+
 <body>
 
-<!-- THANH MENU -->
+<!-- MENU -->
 <nav>
 <ul>
 <li><a href="#">🏠 Trang chủ</a></li>
@@ -80,41 +138,42 @@ h1, h2 {
 </ul>
 </nav>
 
-
 <h1>Nhóm 2 Lớp 12 Văn</h1>
 
-
+<!-- THÀNH VIÊN -->
 <div class="container">
-<div class="member">
-<img src="anh1.jpg" alt="Ảnh thành viên" class="avatar">
-<div class="name">Ngô Ngọc Như Anh</div>
+    <div class="member">
+        <img src="anh1.jpg" class="avatar">
+        <div class="name">Ngô Ngọc Như Anh</div>
+    </div>
+
+    <div class="member">
+        <img src="anh2.jpg" class="avatar">
+        <div class="name">Võ Thị Phương Thanh</div>
+    </div>
+
+    <div class="member">
+        <img src="anh3.jpg" class="avatar">
+        <div class="name">Nguyễn Hoàng Anh Thơ</div>
+    </div>
 </div>
 
-
-<div class="member">
-<img src="anh2.jpg" alt="Ảnh thành viên" class="avatar">
-<div class="name">Võ Thị Phương Thanh</div>
-</div>
-
-
-<div class="member">
-<img src="anh3.jpg" alt="Ảnh thành viên" class="avatar">
-<div class="name">Nguyễn Hoàng Anh Thơ</div>
-</div>
-</div>
-
-
+<!-- BÀI HỌC -->
 <section class="lessons">
 <h2>Danh sách Bài Học</h2>
 <ul class="lesson-list"> 
-    <li><a href="https://www.canva.com/design/DAG1lfqGfAM/4jyVqoT0oir-Dm5fHRCH0Q/edit?zarsrc=411" target="_blank"> Bài 1 & 2: Trí tuệ nhân tạo </a></li> 
-    <li><a href="https://www.canva.com/design/DAGzmqSLqns/zTytNEdptBjnmKe9WBBNfA/edit?zarsrc=411" target="_blank"> Bài 4: Giao thức mạng </a></li> 
-    <li><a href="https://www.canva.com/design/DAG2eeW3ki8/k2l6FfFBv46b8fmsAST_ZA/edit?zarsrc=411" target="_blank"> Bài 6: Giao tiếp & ứng xử trong không gian mạng </a></li>
+    <li><a href="https://www.canva.com/design/DAG1lfqGfAM/4jyVqoT0oir-Dm5fHRCH0Q/edit?zarsrc=411" target="_blank">Bài 1 & 2: Trí tuệ nhân tạo</a></li> 
+    <li><a href="https://www.canva.com/design/DAGzmqSLqns/zTytNEdptBjnmKe9WBBNfA/edit?zarsrc=411" target="_blank">Bài 4: Giao thức mạng</a></li> 
+    <li><a href="https://www.canva.com/design/DAG2eeW3ki8/k2l6FfFBv46b8fmsAST_ZA/edit?zarsrc=411" target="_blank">Bài 6: Giao tiếp & ứng xử trong không gian mạng</a></li>
     <li><a href="#">Bài 3: Một số thiết bị mạng thông dụng</a></li>
-    <li><a href="#">Bài 5: Chia sẻ tài nguyên trên mạng</a></li> <li><a href="#">Bài 7: HTML và cấu trúc trang web</a></li>
-    <li><a href="#">Bài 8: Định dạng văn bản</a></li> <li><a href="#">Bài 9: Tạo danh sách, bảng</a></li> 
+    <li><a href="#">Bài 5: Chia sẻ tài nguyên trên mạng</a></li>
+    <li><a href="#">Bài 7: HTML và cấu trúc trang web</a></li>
+    <li><a href="#">Bài 8: Định dạng văn bản</a></li>
+    <li><a href="#">Bài 9: Tạo danh sách, bảng</a></li>
     <li><a href="#">Bài 10: Tạo liên kết</a></li>
-</ul> 
-</section> 
+</ul>
+</section>
+
 </body>
 </html>
+
