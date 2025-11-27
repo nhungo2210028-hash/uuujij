@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Nhóm 2 Lớp 12 Văn</title>
 
 <style>
-/* ===================== NỀN & FONT ===================== */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: #0c2d48;
+    color: #2a4d69;
     background-image: url("anhnen.jpg");
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
-/* Lớp mờ */
+/* LỚP MỜ NỀN */
 body::before {
     content: "";
     position: fixed;
     inset: 0;
-    background: rgba(255,255,255,0.45);
+    background: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(2px);
     z-index: -1;
 }
 
-/* ===================== MENU ===================== */
+/* THANH MENU */
 nav {
     background: #ffffffcc;
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(4px);
     padding: 12px 20px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     position: sticky;
@@ -43,98 +43,94 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 30px;
+    gap: 25px;
     align-items: center;
-    justify-content: center;
     font-size: 18px;
+    flex-wrap: wrap;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #0c4a85;
+    color: #1d5fa7;
     font-weight: 600;
+    transition: 0.2s;
 }
 
 nav ul li a:hover {
-    color: #083868;
+    color: #0c4a85;
 }
 
-/* ===================== TIÊU ĐỀ ===================== */
-h1 {
+/* TIÊU ĐỀ */
+h1, h2, h3 {
     text-align: center;
-    margin-top: 25px;
-    color: #083868;
+    margin-top: 20px;
 }
 
-/* ===================== KHỐI THÀNH VIÊN ===================== */
-.member-box {
-    background: #ffffffbb;
-    width: 85%;
-    margin: 25px auto;
-    padding: 20px;
-    border-radius: 18px;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.15);
-    text-align: center;
+/* KHUNG NỀN CHO PHẦN THÀNH VIÊN + BÀI HỌC */
+.section-box {
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(3px);
+    border-radius: 12px;
+    padding: 25px;
+    max-width: 900px;
+    margin: 20px auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
 
+/* THÀNH VIÊN */
 .container {
     display: flex;
     justify-content: center;
-    gap: 45px;
+    gap: 40px;
     flex-wrap: wrap;
+    padding: 10px;
 }
 
 .member {
     text-align: center;
+    width: 200px;
 }
 
 .avatar {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+    width: 140px;
+    height: 140px;
     object-fit: cover;
-    border: 4px solid #ffffff;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+    border-radius: 50%;
+    border: 4px solid #ffffffaa;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.35);
+}
+
+.name {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .name a {
-    display: block;
-    margin-top: 10px;
-    font-size: 18px;
-    font-weight: 700;
-    color: #0c4a85;
     text-decoration: none;
+    color: #0c4a85;
 }
 
 .name a:hover {
     text-decoration: underline;
 }
 
-/* ===================== BÀI HỌC ===================== */
-.lesson-box {
-    background: #ffffffbb;
-    width: 85%;
-    margin: 20px auto;
-    padding: 25px;
-    border-radius: 18px;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.15);
-}
-
+/* DANH SÁCH BÀI HỌC */
 .lesson-list {
-    list-style: none;
-    padding: 0;
     max-width: 700px;
     margin: auto;
+    list-style: none;
+    padding: 0;
 }
 
 .lesson-list li {
-    margin: 12px 0;
+    margin: 10px 0;
     font-size: 19px;
 }
 
 .lesson-list li a {
     text-decoration: none;
-    color: #0c4a85;
+    color: #1d5fa7;
     font-weight: 600;
 }
 
@@ -142,129 +138,90 @@ h1 {
     text-decoration: underline;
 }
 
-/* ===================== LIÊN HỆ ===================== */
-.contact-box {
-    background: #ffffffbb;
-    width: 85%;
-    margin: 20px auto 40px;
-    padding: 25px;
-    border-radius: 18px;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.15);
-}
-
-.contact-box h2 {
-    text-align: center;
-}
-
+/* LIÊN HỆ */
 .contact-list {
+    max-width: 700px;
+    margin: auto;
     list-style: none;
     padding: 0;
-    max-width: 600px;
-    margin: auto;
     font-size: 18px;
 }
 
-.contact-item {
-    background: #e8f2ff;
-    padding: 12px 18px;
-    margin: 12px 0;
-    border-radius: 12px;
-    border-left: 5px solid #0c4a85;
-}
-
-.contact-item span {
-    font-weight: 700;
-    color: #0c4a85;
+.contact-list li {
+    margin: 8px 0;
 }
 </style>
 </head>
 
 <body>
 
-<!-- ===================== MENU ===================== -->
+<!-- MENU -->
 <nav>
 <ul>
-<li><a href="#">🏠 Trang chủ</a></li>
-<li><a href="#">Thành viên</a></li>
-<li><a href="#">Bài học</a></li>
-<li><a href="#">Liên hệ</a></li>
+<li><a href="#top">🏠 Trang chủ</a></li>
+<li><a href="#members">Thành Viên</a></li>
+<li><a href="#lessons">Bài học</a></li>
+<li><a href="#contact">Liên hệ</a></li>
 </ul>
 </nav>
 
-<h1>Nhóm 2 Lớp 12 Văn</h1>
+<!-- TIÊU ĐỀ -->
+<h1 id="top">Nhóm 2 Lớp 12 Văn</h1>
 
-<!-- ===================== THÀNH VIÊN ===================== -->
-<div class="member-box">
-<h2>Thành viên</h2>
-<div class="container">
+<!-- THÀNH VIÊN -->
+<div class="section-box" id="members">
+    <h2>Thành viên</h2>
+    <div class="container">
 
-    <div class="member">
-        <img src="anh1.jpg" class="avatar">
-        <div class="name"><a href="https://nhungo2210028-hash.github.io/nanh2210/">Ngô Ngọc Như Anh</a></div>
+        <div class="member">
+            <img src="anh1.jpg" class="avatar">
+            <div class="name"><a href="https://nhungo2210028-hash.github.io/nanh2210/" target="_blank">Ngô Ngọc Như Anh</a></div>
+        </div>
+
+        <div class="member">
+            <img src="anh2.jpg" class="avatar">
+            <div class="name"><a href="https://nhungo2210028-hash.github.io/phuongthanh299/" target="_blank">Võ Thị Phương Thanh</a></div>
+        </div>
+
+        <div class="member">
+            <img src="anh3.jpg" class="avatar">
+            <div class="name"><a href="https://nhungo2210028-hash.github.io/atho61/" target="_blank">Nguyễn Hoàng Anh Thơ</a></div>
+        </div>
+
     </div>
-
-    <div class="member">
-        <img src="anh2.jpg" class="avatar">
-        <div class="name"><a href="https://nhungo2210028-hash.github.io/phuongthanh299/">Võ Thị Phương Thanh</a></div>
-    </div>
-
-    <div class="member">
-        <img src="anh3.jpg" class="avatar">
-        <div class="name"><a href="https://nhungo2210028-hash.github.io/atho61/">Nguyễn Hoàng Anh Thơ</a></div>
-    </div>
-
 </div>
-</div>
 
-<!-- ===================== BÀI HỌC ===================== -->
-<div class="lesson-box">
-<h2>Danh sách bài học</h2>
+<!-- BÀI HỌC -->
+<div class="section-box" id="lessons">
+<h2>Danh sách Bài Học</h2>
 
-<ul class="lesson-list">
-    <li><a target="_blank" href="https://www.canva.com/design/DAG1lfqGfAM/4jyVqoT0oir-Dm5fHRCH0Q/edit?zarsrc=411">Bài 1 & 2: Trí tuệ nhân tạo</a></li>
-
-    <li><a target="_blank" href="https://www.canva.com/design/DAGzmqSLqns/zTytNEdptBjnmKe9WBBNfA/edit?zarsrc=411">Bài 4: Giao thức mạng</a></li>
-
-    <li><a target="_blank" href="https://www.canva.com/design/DAG2eeW3ki8/k2l6FfFBv46b8fmsAST_ZA/edit?zarsrc=411">Bài 6: Giao tiếp & ứng xử trong không gian mạng</a></li>
-
-    <li><a href="#">Bài 3: Thiết bị mạng thông dụng</a></li>
-    <li><a href="#">Bài 5: Chia sẻ tài nguyên</a></li>
-    <li><a href="#">Bài 7: HTML cơ bản</a></li>
+<ul class="lesson-list"> 
+    <li><a href="https://www.canva.com/design/DAG1lfqGfAM/4jyVqoT0oir-Dm5fHRCH0Q/edit?zarsrc=411" target="_blank">Bài 1 & 2: Trí tuệ nhân tạo</a></li> 
+    <li><a href="https://www.canva.com/design/DAGzmqSLqns/zTytNEdptBjnmKe9WBBNfA/edit?zarsrc=411" target="_blank">Bài 4: Giao thức mạng</a></li> 
+    <li><a href="https://www.canva.com/design/DAG2eeW3ki8/k2l6FfFBv46b8fmsAST_ZA/edit?zarsrc=411" target="_blank">Bài 6: Giao tiếp & ứng xử trong không gian mạng</a></li>
+    <li><a href="#">Bài 3: Một số thiết bị mạng thông dụng</a></li>
+    <li><a href="#">Bài 5: Chia sẻ tài nguyên trên mạng</a></li>
+    <li><a href="#">Bài 7: HTML và cấu trúc trang web</a></li>
     <li><a href="#">Bài 8: Định dạng văn bản</a></li>
     <li><a href="#">Bài 9: Tạo danh sách, bảng</a></li>
     <li><a href="#">Bài 10: Tạo liên kết</a></li>
 </ul>
 </div>
 
-<!-- ===================== THÔNG TIN LIÊN HỆ ===================== -->
-<div class="contact-box">
+<!-- THÔNG TIN LIÊN HỆ -->
+<div class="section-box" id="contact">
 <h2>Thông tin liên hệ</h2>
-
 <ul class="contact-list">
-
-    <li class="contact-item">
-        <span>Ngô Ngọc Như Anh</span><br>
-        SĐT: 0374515859<br>
-        Email: nhungo2210028@gmail.com
-    </li>
-
-    <li class="contact-item">
-        <span>Võ Thị Phương Thanh</span><br>
-        SĐT: 0763911196<br>
-        Email: thanhphuonh290908@gmail.com
-    </li>
-
-    <li class="contact-item">
-        <span>Nguyễn Hoàng Anh Thơ</span><br>
-        SĐT: 0965226746<br>
-        Email: anhththonguyen@gmail.com
-    </li>
-
+    <li><b>Ngô Ngọc Như Anh</b> — 📞 0374515859 — ✉️ nhungo2210028@gmail.com</li>
+    <li><b>Võ Thị Phương Thanh</b> — 📞 0763991196 — ✉️ phuongthanh290908@gmail.com</li>
+    <li><b>Nguyễn Hoàng Anh Thơ</b> — 📞 0965226746 — ✉️ anhththonguyen@gmail.com</li>
 </ul>
 </div>
 
 </body>
 </html>
+
+
 
 
 
