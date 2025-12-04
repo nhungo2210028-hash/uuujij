@@ -17,12 +17,12 @@ body {
     background-repeat: no-repeat;
 }
 
-/* LỚP MỜ - GIẢM ĐỘ MỜ ĐỂ ẢNH RÕ HƠN */
+/* LỚP MỜ */
 body::before {
     content: "";
     position: fixed;
     inset: 0;
-    background: rgba(255, 255, 255, 0.30); /* giảm từ 0.5 xuống 0.30 */
+    background: rgba(255, 255, 255, 0.30);
     backdrop-filter: blur(2px);
     z-index: -1;
 }
@@ -42,11 +42,11 @@ body::before {
 
 .banner-title {
     font-size: 60px;
-    font-weight: 700;               /* in đậm bình thường (bold) */
+    font-weight: 700;
     color: white;
     letter-spacing: 3px;
     text-transform: uppercase;
-    font-family: Arial, Helvetica, sans-serif; /* dùng font hệ thống tránh lỗi phông */
+    font-family: Arial, Helvetica, sans-serif;
     text-shadow: 4px 4px 14px rgba(0,0,0,0.55);
     margin: 0;
 }
@@ -67,7 +67,7 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;  /* căn giữa menu */
+    justify-content: center;
     gap: 40px;
     align-items: center;
 }
@@ -114,6 +114,7 @@ nav ul li a:hover {
     object-fit: cover;
     border: 4px solid #ffffffaa;
     box-shadow: 0 4px 10px rgba(0,0,0,0.35);
+    margin-bottom: 12px;   /* 📌 Tạo khoảng cách dưới avatar */
 }
 
 .name a {
@@ -126,7 +127,7 @@ nav ul li a:hover {
 .role {
     font-size: 15px;
     color: #333;
-    margin-top: 4px;
+    margin-top: 6px;   /* 📌 Tạo khoảng cách trên role */
 }
 
 /* BÀI HỌC */
@@ -187,8 +188,8 @@ footer {
 <nav>
 <ul>
 <li><a href="#members">Thành Viên</a></li>
-<li><a href="#lessons">Bài học</a></li>
-<li><a href="#contact">Liên hệ</a></li>
+<li><a href="#lessons">Bài Học</a></li>
+<li><a href="#contact">Liên Hệ</a></li>
 </ul>
 </nav>
 
@@ -201,19 +202,19 @@ footer {
         <div class="member">
             <img src="anh1.jpg" class="avatar" alt="Ngô Ngọc Như Anh">
             <div class="name"><a href="https://nhungo2210028-hash.github.io/nanh2210/" target="_blank">Ngô Ngọc Như Anh</a></div>
-            <div class="role">Nhóm trưởng</div>
+            <div class="role">Nhóm Trưởng</div>
         </div>
 
         <div class="member">
             <img src="anh2.jpg" class="avatar" alt="Võ Thị Phương Thanh">
             <div class="name"><a href="https://nhungo2210028-hash.github.io/phuongthanh299/" target="_blank">Võ Thị Phương Thanh</a></div>
-            <div class="role">Thành viên</div>
+            <div class="role">Thành Viên</div>
         </div>
 
         <div class="member">
             <img src="anh3.jpg" class="avatar" alt="Nguyễn Hoàng Anh Thơ">
             <div class="name"><a href="https://nhungo2210028-hash.github.io/atho61/" target="_blank">Nguyễn Hoàng Anh Thơ</a></div>
-            <div class="role">Thư ký</div>
+            <div class="role">Thành Viên</div>
         </div>
 
     </div>
@@ -233,6 +234,14 @@ footer {
     <li><a href="#">Bài 8: Định dạng văn bản</a></li>
     <li><a href="#">Bài 9: Tạo danh sách, bảng</a></li>
     <li><a href="#">Bài 10: Tạo liên kết</a></li>
+    <li><a href="#">Bài 11: Chèn tệp tin đa phương tiện và khung nội tuyến vào trang web</a></li>
+    <li><a href="#">Bài 12: Tạo biểu mẫu </a></li>
+    <li><a href="#">Bài 13: KHái niệm, vai trò của CSS</a></li>
+    <li><a href="#">Bài 14: Định dạng văn bản bằng CSS</a></li>
+    <li><a href="#">Bài 15: Tạo màu cho chữ và nền</a></li>
+    <li><a href="#">Bài 16: Định dạng khung </a></li>
+    <li><a href="#">Bài 17: Các mức ưu tiên của bộ chọn</a></li>
+    <li><a href="#">Bài 18: Thực hành tổng hợp thiết kế trang web</a></li>
 </ul>
 </div>
 
@@ -263,7 +272,6 @@ footer {
 
 </body>
 </html>
-
 
 
 
