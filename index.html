@@ -17,12 +17,12 @@ body {
     background-repeat: no-repeat;
 }
 
-/* LỚP MỜ */
+/* LỚP MỜ - GIẢM ĐỘ MỜ ĐỂ ẢNH RÕ HƠN */
 body::before {
     content: "";
     position: fixed;
     inset: 0;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.30); /* giảm từ 0.5 xuống 0.30 */
     backdrop-filter: blur(2px);
     z-index: -1;
 }
@@ -42,12 +42,13 @@ body::before {
 
 .banner-title {
     font-size: 60px;
-    font-weight: 800;
+    font-weight: 700;               /* in đậm bình thường (bold) */
     color: white;
     letter-spacing: 3px;
     text-transform: uppercase;
-    font-family: 'Trebuchet MS', sans-serif;
-    text-shadow: 4px 4px 14px rgba(0,0,0,0.65);
+    font-family: Arial, Helvetica, sans-serif; /* dùng font hệ thống tránh lỗi phông */
+    text-shadow: 4px 4px 14px rgba(0,0,0,0.55);
+    margin: 0;
 }
 
 /* MENU */
@@ -66,7 +67,7 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;  /* <- CĂN GIỮA MENU */
+    justify-content: center;  /* căn giữa menu */
     gap: 40px;
     align-items: center;
 }
@@ -198,21 +199,21 @@ footer {
     <div class="container">
 
         <div class="member">
-            <img src="anh1.jpg" class="avatar">
+            <img src="anh1.jpg" class="avatar" alt="Ngô Ngọc Như Anh">
             <div class="name"><a href="https://nhungo2210028-hash.github.io/nanh2210/" target="_blank">Ngô Ngọc Như Anh</a></div>
             <div class="role">Nhóm trưởng</div>
         </div>
 
         <div class="member">
-            <img src="anh2.jpg" class="avatar">
+            <img src="anh2.jpg" class="avatar" alt="Võ Thị Phương Thanh">
             <div class="name"><a href="https://nhungo2210028-hash.github.io/phuongthanh299/" target="_blank">Võ Thị Phương Thanh</a></div>
             <div class="role">Thành viên</div>
         </div>
 
         <div class="member">
-            <img src="anh3.jpg" class="avatar">
+            <img src="anh3.jpg" class="avatar" alt="Nguyễn Hoàng Anh Thơ">
             <div class="name"><a href="https://nhungo2210028-hash.github.io/atho61/" target="_blank">Nguyễn Hoàng Anh Thơ</a></div>
-            <div class="role">Thành viên</div>
+            <div class="role">Thư ký</div>
         </div>
 
     </div>
@@ -262,6 +263,7 @@ footer {
 
 </body>
 </html>
+
 
 
 
