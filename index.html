@@ -44,6 +44,11 @@ body.dark footer {
     color: white;
 }
 
+/* TÊN BÀI HỌC CHUYỂN MÀU TRẮNG KHI DARK MODE */
+body.dark .lesson-list a {
+    color: white;
+}
+
 /* OVERLAY */
 body::before {
     content: "";
@@ -178,6 +183,7 @@ nav ul li a {
     text-align: center;
 }
 
+/* AVATAR */
 .avatar {
     width: 140px;
     height: 140px;
@@ -185,6 +191,27 @@ nav ul li a {
     object-fit: cover;
     border: 4px solid #ffffffaa;
 }
+
+/* --- CHỈNH THEO YÊU CẦU CỦA MÈO --- */
+.name {
+    font-size: 22px;       /* Tăng cỡ chữ */
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.role {
+    font-size: 18px;
+    font-weight: 700;      /* Làm nổi bật */
+    color: #004c99;        /* Xanh pastel đậm hơn */
+    margin-top: 6px;
+}
+
+.note {
+    font-size: 13px;       /* Giảm cỡ chữ */
+    opacity: 0.8;
+    margin-top: 12px;      /* Cách dòng rõ hơn */
+}
+/* ---------------------------- */
 
 /* FOOTER */
 footer {
@@ -242,66 +269,70 @@ footer {
 
     <div class="container">
 
-      <div class="member">
-    <a href=><a href="https://nhungo2210028-hash.github.io/nanh2210/" target="_blank">" target="_blank">
-        <img src="anh1.jpg" class="avatar">
-    </a>
-    <div class="name">Ngô Ngọc Như Anh</div>
-    <div class="role">Nhóm trưởng</div>
-    <div class="note">Ghi chú : "Đợi xíu lấy cái kính" </div>
-</div>
-          <div class="member">
-    <a href=><a href="https://nhungo2210028-hash.github.io/phuongthanh299/" target="_blank">" target="_blank">
-        <img src="anh2.jpg" class="avatar">
-    </a>
-    <div class="name">Võ Thị Phương Thanh</div>
-    <div class="note">Ghi chú : Thích ăn rong biển và xem phim kinh dị </div>
-</div>
+        <div class="member">
+            <a href="https://nhungo2210028-hash.github.io/nanh2210/" target="_blank">
+                <img src="anh1.jpg" class="avatar">
+            </a>
+            <div class="name">Ngô Ngọc Như Anh</div>
+            <div class="role">Nhóm Trưởng</div>
+            <div class="note">Ghi chú : "Đợi xíu lấy cái kính"</div>
+        </div>
 
-       <div class="member">
-    <a href=><a href="https://nhungo2210028-hash.github.io/atho61/" target="_blank">" target="_blank">
-        <img src="anh3.jpg" class="avatar">
-    </a>
-    <div class="name">Nguyễn Hoàng Anh Thơ</div>
-    <div class="note">pht</div>
-</div>
+        <div class="member">
+            <a href="https://nhungo2210028-hash.github.io/phuongthanh299/" target="_blank">
+                <img src="anh2.jpg" class="avatar">
+            </a>
+            <div class="name">Võ Thị Phương Thanh</div>
+            <div class="role">Thành Viên</div>
+            <div class="note">Ghi chú : Thích ăn rong biển và xem phim kinh dị</div>
+        </div>
+
+        <div class="member">
+            <a href="https://nhungo2210028-hash.github.io/atho61/" target="_blank">
+                <img src="anh3.jpg" class="avatar">
+            </a>
+            <div class="name">Nguyễn Hoàng Anh Thơ</div>
+            <div class="role">Thành Viên</div>
+            <div class="note">pht</div>
+        </div>
+
     </div>
 </div>
 
-<!-- BÀI HỌC + FORM Ý KIẾN -->
+<!-- BÀI HỌC -->
 <div class="section-box" id="lessons">
     <h2 style="text-align:center;">Danh sách Bài Học</h2>
 
 <div class="wrapper">
 
- <!-- BÀI HỌC --> <ul class="lesson-list">
-     <li><a href="https://www.canva.com/design/DAG1lfqGfAM/4jyVqoT0oir-Dm5fHRCH0Q/edit?zarsrc=411" target="_blank">Bài 1 & 2: Trí tuệ nhân tạo</a></li>
-     <li><a href="https://www.canva.com/design/DAG6ckxwYYU/x-r1gJH-f7PlW7aoNlXd7A/edit?utm_content=DAG6ckxwYYU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">Bài 3: Thiết bị mạng phổ biến</a></li> 
-     <li><a href="https://www.canva.com/design/DAGzmqSLqns/zTytNEdptBjnmKe9WBBNfA/edit?zarsrc=411" target="_blank">Bài 4: Giao thức mạng</a></li>
-     <li><a href="#">Bài 5: Chia sẻ tài nguyên</a></li>
-     <li><a href="https://www.canva.com/design/DAG2eeW3ki8/k2l6FfFBv46b8fmsAST_ZA/edit?zarsrc=411" target="_blank">Bài 6: Giao tiếp & ứng xử trong không gian mạng</a></li> 
-     <li><a href="#">Bài 7: HTML</a></li>
-     <li><a href="#">Bài 8: Định dạng văn bản</a></li>
-     <li><a href="#">Bài 9: Tạo bảng</a></li> 
-     <li><a href="#">Bài 10: Liên kết</a></li> 
-     <li><a href="#">Bài 11: Chèn tệp tin đa phương tiện và khung nội tuyến vào trang web</a></li> 
-     <li><a href="#">Bài 12: Tạo biểu mẫu </a></li>
-     <li><a href="#">Bài 13: KHái niệm, vai trò của CSS</a></li>
-     <li><a href="#">Bài 14: Định dạng văn bản bằng CSS</a></li> 
-     <li><a href="#">Bài 15: Tạo màu cho chữ và nền</a></li> 
-     <li><a href="#">Bài 16: Định dạng khung </a></li>
-     <li><a href="#">Bài 17: Các mức ưu tiên của bộ chọn</a></li>
-     <li><a href="#">Bài 18: Thực hành tổng hợp thiết kế trang web</a></li> 
- </ul>
+<ul class="lesson-list">
+    <li><a href="https://www.canva.com/design/DAG1lfqGfAM/4jyVqoT0oir-Dm5fHRCH0Q/edit?zarsrc=411" target="_blank">Bài 1 & 2: Trí tuệ nhân tạo</a></li>
+    <li><a href="https://www.canva.com/design/DAG6ckxwYYU/x-r1gJH-f7PlW7aoNlXd7A/edit?utm_content=DAG6ckxwYYU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">Bài 3: Thiết bị mạng phổ biến</a></li> 
+    <li><a href="https://www.canva.com/design/DAGzmqSLqns/zTytNEdptBjnmKe9WBBNfA/edit?zarsrc=411" target="_blank">Bài 4: Giao thức mạng</a></li>
+    <li><a href="#">Bài 5: Chia sẻ tài nguyên</a></li>
+    <li><a href="https://www.canva.com/design/DAG2eeW3ki8/k2l6FfFBv46b8fmsAST_ZA/edit?zarsrc=411" target="_blank">Bài 6: Giao tiếp & ứng xử trong không gian mạng</a></li> 
+    <li><a href="#">Bài 7: HTML</a></li>
+    <li><a href="#">Bài 8: Định dạng văn bản</a></li>
+    <li><a href="#">Bài 9: Tạo bảng</a></li> 
+    <li><a href="#">Bài 10: Liên kết</a></li> 
+    <li><a href="#">Bài 11: Chèn tệp tin đa phương tiện</a></li> 
+    <li><a href="#">Bài 12: Tạo biểu mẫu</a></li>
+    <li><a href="#">Bài 13: CSS</a></li>
+    <li><a href="#">Bài 14: Định dạng văn bản CSS</a></li> 
+    <li><a href="#">Bài 15: Tạo màu chữ và nền</a></li> 
+    <li><a href="#">Bài 16: Khung CSS</a></li>
+    <li><a href="#">Bài 17: Mức ưu tiên</a></li>
+    <li><a href="#">Bài 18: Thực hành</a></li> 
+</ul>
 
-    <!-- FORM Ý KIẾN -->
-    <div class="feedback-box">
-        <h3>Form ý kiến</h3>
-        <input type="text" placeholder="Họ và Tên">
-        <input type="text" placeholder="Lớp">
-        <textarea rows="4" placeholder="Nội dung phản hồi..."></textarea>
-        <button>Gửi ý kiến</button>
-    </div>
+<!-- FORM Ý KIẾN -->
+<div class="feedback-box">
+    <h3>Form ý kiến</h3>
+    <input type="text" placeholder="Họ và Tên">
+    <input type="text" placeholder="Lớp">
+    <textarea rows="4" placeholder="Nội dung phản hồi..."></textarea>
+    <button>Gửi ý kiến</button>
+</div>
 
 </div>
 </div>
@@ -340,6 +371,7 @@ document.getElementById("darkToggle").onclick = function() {
 
 </body>
 </html>
+
 
 
 
