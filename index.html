@@ -20,12 +20,7 @@ body {
 
 /* DARK MODE */
 body.dark {
-    color: #e6e6e6;
-    background: #1a1a1a !important;
-}
-
-body.dark .section-box {
-    background: rgba(40,40,40,0.7);
+    color: white;
 }
 
 body.dark nav {
@@ -36,8 +31,17 @@ body.dark nav ul li a {
     color: #c8daff;
 }
 
+body.dark .section-box {
+    background: rgba(40,40,40,0.75);
+}
+
+body.dark .feedback-box {
+    background: rgba(40,40,40,0.8);
+}
+
 body.dark footer {
     background: #0d3d6b;
+    color: white;
 }
 
 /* OVERLAY */
@@ -57,7 +61,6 @@ body::before {
     background-image: url("banner.jpg");
     background-size: cover;
     background-position: center;
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,10 +70,9 @@ body::before {
     font-size: 60px;
     font-weight: 700;
     color: white;
-    letter-spacing: 3px;
     text-transform: uppercase;
+    letter-spacing: 3px;
     text-shadow: 4px 4px 14px rgba(0,0,0,0.55);
-    margin: 0;
 }
 
 /* MENU */
@@ -81,17 +83,15 @@ nav {
     position: sticky;
     top: 0;
     z-index: 10;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
 nav ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
     justify-content: center;
     gap: 40px;
-    align-items: center;
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li a {
@@ -101,22 +101,21 @@ nav ul li a {
     font-size: 18px;
 }
 
-/* SECTIONS */
+/* SECTION BOX */
 .section-box {
-    background: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.75);
     backdrop-filter: blur(3px);
-    border-radius: 12px;
     padding: 25px;
     max-width: 900px;
     margin: 25px auto;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    border-radius: 12px;
 }
 
-/* FLEX CHO BÀI HỌC + FORM */
+/* WRAPPER CHUNG */
 .wrapper {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 35px;
     flex-wrap: wrap;
 }
 
@@ -131,48 +130,39 @@ nav ul li a {
     margin: 10px 0;
 }
 
-.lesson-list li a {
+.lesson-list a {
     text-decoration: none;
     color: #1d5fa7;
     font-weight: 600;
 }
 
-/* FORM Ý KIẾN */
+/* FORM Ý KIẾN — KHUNG RIÊNG */
 .feedback-box {
-    width: 320px;
-    background: rgba(255,255,255,0.75);
-    padding: 20px;
+    width: 330px;
+    padding: 22px;
+    background: rgba(255,255,255,0.85);
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.feedback-box h3 {
     text-align: center;
-    margin-bottom: 15px;
 }
 
 .feedback-box input,
 .feedback-box textarea {
-    width: 100%;
+    width: 90%;
     padding: 10px;
-    margin: 8px 0 14px;
+    margin: 8px auto;
+    display: block;
     border-radius: 6px;
     border: 1px solid #aaa;
 }
 
 .feedback-box button {
-    width: 100%;
+    width: 90%;
     padding: 10px;
     background: #1d5fa7;
     color: white;
     border: none;
     border-radius: 6px;
-    font-size: 16px;
     cursor: pointer;
-}
-
-.feedback-box button:hover {
-    background: #0c4a85;
 }
 
 /* MEMBER */
@@ -194,35 +184,28 @@ nav ul li a {
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid #ffffffaa;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.35);
-    margin-bottom: 12px;
-}
-
-.name a {
-    text-decoration: none;
-    color: #0c4a85;
-    font-size: 18px;
-    font-weight: 600;
-}
-
-.role { margin-top: 6px; }
-
-.note {
-    font-size: 14px;
-    color: #333;
-    margin-top: 4px;
-    font-style: italic;
 }
 
 /* FOOTER */
 footer {
     background: #1d5fa7;
     color: white;
-    padding: 40px 10%;
-    margin-top: 40px;
+    padding: 40px 5%;
 }
 
-/* DARK MODE BUTTON */
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    text-align: center;
+}
+
+.footer-grid div {
+    flex: 1;
+}
+
+/* NÚT DARK MODE */
 #darkToggle {
     position: fixed;
     bottom: 25px;
@@ -230,10 +213,9 @@ footer {
     background: #1d5fa7;
     color: white;
     padding: 12px 16px;
-    border-radius: 50px;
+    border-radius: 30px;
     border: none;
     cursor: pointer;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
 }
 </style>
 </head>
@@ -250,7 +232,7 @@ footer {
 <ul>
 <li><a href="#members">Thành Viên</a></li>
 <li><a href="#lessons">Bài Học</a></li>
-<li><a href="#contact">liên hệ</a></li>
+<li><a href="#contact">Liên Hệ</a></li>
 </ul>
 </nav>
 
@@ -262,23 +244,23 @@ footer {
 
         <div class="member">
             <img src="anh1.jpg" class="avatar">
-            <div class="name"><a href="#" target="_blank">Ngô Ngọc Như Anh</a></div>
+            <div class="name"><a href="https://nhungo2210028-hash.github.io/nanh2210/" target="_blank">>Ngô Ngọc Như Anh</div>
             <div class="role">Nhóm trưởng</div>
-            <div class="note">"Từ từ đợi lấy cái kính"</div>
+            <div class="note">Ghi chú : "Đợi xíu lấy cái kính"</div>
         </div>
 
         <div class="member">
             <img src="anh2.jpg" class="avatar">
-            <div class="name"><a href="#" target="_blank">Võ Thị Phương Thanh</a></div>
+            <div class="name"><a href="https://nhungo2210028-hash.github.io/phuongthanh299/" target="_blank">Võ Thị Phương Thanh</div>
             <div class="role">Thành viên</div>
-            <div class="note">Thích ăn rong biển và xem phim kinh dị</div>
+            <div class="note">Ghi chú : Thích ăn rong biển và xem phim kinh dị</div>
         </div>
 
         <div class="member">
             <img src="anh3.jpg" class="avatar">
-            <div class="name"><a href="#" target="_blank">Nguyễn Hoàng Anh Thơ</a></div>
-            <div class="role">Thư ký</div>
-            <div class="note">pht</div>
+            <div class="name"><a href="https://nhungo2210028-hash.github.io/atho61/" target="_blank">Nguyễn Hoàng Anh Thơ</div>
+            <div class="role">Thành Viên</div>
+            <div class="note">Ghi chú : pht </div>
         </div>
 
     </div>
@@ -290,35 +272,32 @@ footer {
 
 <div class="wrapper">
 
-    <!-- BÀI HỌC -->
-    <ul class="lesson-list">
-       <li><a href="https://www.canva.com/design/DAG1lfqGfAM/4jyVqoT0oir-Dm5fHRCH0Q/edit?zarsrc=411" target="_blank">Bài 1 & 2: Trí tuệ nhân tạo</a></li>
-        <li><a href="https://www.canva.com/design/DAG6ckxwYYU/x-r1gJH-f7PlW7aoNlXd7A/edit?utm_content=DAG6ckxwYYU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">Bài 3: Thiết bị mạng phổ biến</a></li>
-        <li><a href="https://www.canva.com/design/DAGzmqSLqns/zTytNEdptBjnmKe9WBBNfA/edit?zarsrc=411" target="_blank">Bài 4: Giao thức mạng</a></li> 
-        <li><a href="#">Bài 5: Chia sẻ tài nguyên</a></li>
-        <li><a href="https://www.canva.com/design/DAG2eeW3ki8/k2l6FfFBv46b8fmsAST_ZA/edit?zarsrc=411" target="_blank">Bài 6: Giao tiếp & ứng xử trong không gian mạng</a></li> 
-        <li><a href="#">Bài 7: HTML</a></li>
-        <li><a href="#">Bài 8: Định dạng văn bản</a></li>
-        <li><a href="#">Bài 9: Tạo bảng</a></li>
-        <li><a href="#">Bài 10: Liên kết</a></li>
-        <li><a href="#">Bài 11: Chèn tệp tin đa phương tiện và khung nội tuyến vào trang web</a></li>
-        <li><a href="#">Bài 12: Tạo biểu mẫu </a></li>
-        <li><a href="#">Bài 13: KHái niệm, vai trò của CSS</a></li>
-        <li><a href="#">Bài 14: Định dạng văn bản bằng CSS</a></li>
-        <li><a href="#">Bài 15: Tạo màu cho chữ và nền</a></li>
-        <li><a href="#">Bài 16: Định dạng khung </a></li>
-        <li><a href="#">Bài 17: Các mức ưu tiên của bộ chọn</a></li>
-        <li><a href="#">Bài 18: Thực hành tổng hợp thiết kế trang web</a></li>
-    </ul>
+ <!-- BÀI HỌC --> <ul class="lesson-list">
+     <li><a href="https://www.canva.com/design/DAG1lfqGfAM/4jyVqoT0oir-Dm5fHRCH0Q/edit?zarsrc=411" target="_blank">Bài 1 & 2: Trí tuệ nhân tạo</a></li>
+     <li><a href="https://www.canva.com/design/DAG6ckxwYYU/x-r1gJH-f7PlW7aoNlXd7A/edit?utm_content=DAG6ckxwYYU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">Bài 3: Thiết bị mạng phổ biến</a></li> 
+     <li><a href="https://www.canva.com/design/DAGzmqSLqns/zTytNEdptBjnmKe9WBBNfA/edit?zarsrc=411" target="_blank">Bài 4: Giao thức mạng</a></li>
+     <li><a href="#">Bài 5: Chia sẻ tài nguyên</a></li>
+     <li><a href="https://www.canva.com/design/DAG2eeW3ki8/k2l6FfFBv46b8fmsAST_ZA/edit?zarsrc=411" target="_blank">Bài 6: Giao tiếp & ứng xử trong không gian mạng</a></li> 
+     <li><a href="#">Bài 7: HTML</a></li>
+     <li><a href="#">Bài 8: Định dạng văn bản</a></li>
+     <li><a href="#">Bài 9: Tạo bảng</a></li> 
+     <li><a href="#">Bài 10: Liên kết</a></li> 
+     <li><a href="#">Bài 11: Chèn tệp tin đa phương tiện và khung nội tuyến vào trang web</a></li> 
+     <li><a href="#">Bài 12: Tạo biểu mẫu </a></li>
+     <li><a href="#">Bài 13: KHái niệm, vai trò của CSS</a></li>
+     <li><a href="#">Bài 14: Định dạng văn bản bằng CSS</a></li> 
+     <li><a href="#">Bài 15: Tạo màu cho chữ và nền</a></li> 
+     <li><a href="#">Bài 16: Định dạng khung </a></li>
+     <li><a href="#">Bài 17: Các mức ưu tiên của bộ chọn</a></li>
+     <li><a href="#">Bài 18: Thực hành tổng hợp thiết kế trang web</a></li> 
+ </ul>
 
     <!-- FORM Ý KIẾN -->
     <div class="feedback-box">
         <h3>Form ý kiến</h3>
-
         <input type="text" placeholder="Họ và Tên">
         <input type="text" placeholder="Lớp">
-        <textarea rows="5" placeholder="Nội dung phản hồi..."></textarea>
-
+        <textarea rows="4" placeholder="Nội dung phản hồi..."></textarea>
         <button>Gửi ý kiến</button>
     </div>
 
@@ -328,9 +307,23 @@ footer {
 <!-- FOOTER -->
 <footer id="contact">
     <div class="footer-grid">
-        <div><h3>Ngô Ngọc Như Anh</h3><p>📞 0374515859</p><p>✉️ nhungo2210028@gmail.com</p></div>
-        <div><h3>Võ Thị Phương Thanh</h3><p>📞 0763991196</p><p>✉️ phuongthanh290908@gmail.com</p></div>
-        <div><h3>Nguyễn Hoàng Anh Thơ</h3><p>📞 0965226746</p><p>✉️ anhththonguyen@gmail.com</p></div>
+        <div>
+            <h3>Ngô Ngọc Như Anh</h3>
+            <p>📞 0374515859</p>
+            <p>✉️ nhungo2210028@gmail.com</p>
+        </div>
+
+        <div>
+            <h3>Võ Thị Phương Thanh</h3>
+            <p>📞 0763991196</p>
+            <p>✉️ phuongthanh290908@gmail.com</p>
+        </div>
+
+        <div>
+            <h3>Nguyễn Hoàng Anh Thơ</h3>
+            <p>📞 0965226746</p>
+            <p>✉️ anhththonguyen@gmail.com</p>
+        </div>
     </div>
 </footer>
 
