@@ -226,12 +226,23 @@ footer {
     flex-wrap: wrap;
     gap: 30px;
     text-align: center;
-    color: white;        /* đổi chữ thành màu trắng */
-    text-decoration: none;  /* bỏ gạch chân */
 }
 
 .footer-grid div {
     flex: 1;
+}
+
+/* sửa màu và bỏ gạch chân cho link */
+.footer-grid a {
+    color: white; 
+    text-decoration: none; 
+    font-weight: 600;
+}
+
+/* nếu hover muốn đổi màu thì chỉnh ở đây */
+.footer-grid a:hover {
+    color: #e3eaff;  /* trắng hơi sáng */
+    text-decoration: none;
 }
 
 
@@ -375,6 +386,7 @@ document.getElementById("darkToggle").onclick = function() {
 
 </body>
 </html>
+
 
 
 
